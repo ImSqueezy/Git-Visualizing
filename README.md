@@ -1,7 +1,8 @@
 # Git-Visualizing
 A guide to thinking in graphs, not just commands.
 
-(a git log here)
+<img width="1250" height="455" alt="image" src="https://github.com/user-attachments/assets/9ea85d68-df09-4091-9808-122cda688a44" />
+
 
 Have you ever done a git rebase and watched your code vanish? Or stared at a git log output, trying to decipher the story of your project?
 
@@ -23,7 +24,8 @@ Each snapshot stores a complete snapshot of every file in your repository at tha
 # Core Concepts
 When working with Git, you should definitely use its logging, some commands to remember and there you are.
 
-(a picture that shows what is below)
+<img width="1122" height="444" alt="image" src="https://github.com/user-attachments/assets/42a36362-3e4e-4d46-9412-598688f65175" />
+
 
 The picture shows a Git repository's graph on the command line that was initialized with the commit 'blah', switched or checked-out another branch (feature) before the second commit, merged after one commit 'blah1' made from master branch and one other 'blah2' from feature then other changes made from master (change 1 <- 4). If we were to interpret that we would take a look at the following!
 
@@ -33,7 +35,8 @@ Switching or checking out in Git is the process of moving from one branch or com
 
 - - -
 
-(graph picture)
+<img width="514" height="484" alt="image" src="https://github.com/user-attachments/assets/ec8ddd5c-35c2-4afe-9fa8-945293bf574b" />
+
 
 Im using a Visualizing helper! So, you could notice different hashes but the Graph remains the same as the logs above.
 
@@ -45,12 +48,13 @@ The branches now merged after they decided to split up on the way but feature wa
 2. or it's some public/collaborative repo that you're into:
 - In this case you would always need to fetch with origin (git fetch origin) to get latest changes, merge/rebase and then work from there, if not, you will end up working on outdated code, merge conflicts will accumulate and of course integration would be painful! (Forget about git push--forcehh)
 
-(rebasing gif)
+
+https://github.com/user-attachments/assets/a2fb6b90-7f1d-4abd-aae0-c36d67dfb3a9
 
 - - -
 
 When Git logging used along with VS-Code Graph they provide a perfect Vision of the project which transforms how you understand and navigate your codebase.
 
-(descriptive ss)
+<img width="1313" height="368" alt="image" src="https://github.com/user-attachments/assets/95973508-7d0d-4033-b12f-6d913a9c648a" />
 
 Notice that we are now looking at feature branch (we have untracked commit of message 'change4'), Git graph didn't mention anything of that but we're seeing that the VS-Code's Graph has a commit colored in orange, meaning that this branch is behind master branch by one commit which is 'change4'. Beautiful isn't it?
