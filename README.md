@@ -20,11 +20,37 @@ At its heart, a Git repository is not a folder of files, it is a timeline of sna
 
 Each snapshot stores a complete snapshot of every file in your repository at that moment AKA: a Commit, which consists of a Hash, a Parent Pointer and a Commit Message. The Commit Message tells your teammates and your future self why the change was made where the Parent Pointer is a link to the past commit (that's what builds the timeline) and lastly the Hash is a 40-character hexadecimal string (a1b2c3d4e5…)
 
-# Visualizing Core Concept
-So far, we understand that Git is a graph of commits, each commit is a node, a frozen moment in time that can never be changed.
+# Core Concepts
+When working with Git, you should definitely use its logging, some commands to remember and there you are.
 
 (a picture that shows what is below)
 
-The picture shows a Git repository's graph that I initialized, i switched or checked-out another branch (feature) on the second commit made two other changes and got behind by one commit. You will notice a HEAD mark above the new branche's name, that is a special pointer that points to the tip of a branch, simply tells you which version or part of the project you're at.
+The picture shows a Git repository's graph on the command line that was initialized with the commit 'blah', switched or checked-out another branch (feature) before the second commit, merged after one commit 'blah1' made from master branch and one other 'blah2' from feature then other changes made from master (change 1 <- 4). If we were to interpret that we would take a look at the following!
 
-if you run git status on the command line
+--oneline option provides less lines of information from the default log command, that's why you're seeing the hash shortened (a hash of 7 chars).
+
+Switching or checking out in Git is the process of moving from one branch or commit to another. When you run git switch or git checkout, you're essentially telling Git to update your working directory and staging area to match the snapshot of the branch or commit you're switching to.
+
+- - -
+
+(graph picture)
+
+Im using a Visualizing helper! So, you could notice different hashes but the Graph remains the same as the logs above.
+
+If you wonder what's the HEAD mark below master, that is a special pointer that points to the tip of a branch, simply tells you which version or part of the project you're at.
+
+The branches now merged after they decided to split up on the way but feature was left behind since master has advanced in changes and feature does not keep track anymore! Suppose master made 4 other commits (like we saw in previous example), feature wouldn't have them if he doesn't keep track and here is where the miss begins. We have two scenarios:
+1. either master branch is yours and you're just using too many branches for some cause (working localy):
+- In this case for example you only need to keep track of what you have done and do what is needed (git merge master or git rebase master).
+2. or it's some public/collaborative repo that you're into:
+- In this case you would always need to fetch with origin (git fetch origin) to get latest changes, merge/rebase and then work from there, if not, you will end up working on outdated code, merge conflicts will accumulate and of course integration would be painful! (Forget about git push--forcehh)
+
+(rebasing gif)
+
+- - -
+
+When Git logging used along with VS-Code Graph they provide a perfect Vision of the project which transforms how you understand and navigate your codebase.
+
+(descriptive ss)
+
+Notice that we are now looking at feature branch (we have untracked commit of message 'change4'), Git graph didn't mention anything of that but we're seeing that the VS-Code's Graph has a commit colored in orange, meaning that this branch is behind master branch by one commit which is 'change4'. Beautiful isn't it?
