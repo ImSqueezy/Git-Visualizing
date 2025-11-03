@@ -1,16 +1,13 @@
 # Git-Visualizing
 A guide to thinking in graphs, not just commands.
 
-<img width="1250" height="455" alt="image" src="https://github.com/user-attachments/assets/9ea85d68-df09-4091-9808-122cda688a44" />
+This article assumes you have a basic understanding of Git! I'll show you how to transform from someone who just types Git commands into someone who truly understands them by learning to visualize the commit graph that forms the heart of every Git repository.
 
+<img width="1250" height="455" alt="image" src="https://github.com/user-attachments/assets/9ea85d68-df09-4091-9808-122cda688a44" />
 
 Have you ever done a git rebase and watched your code vanish? Or stared at a git log output, trying to decipher the story of your project?
 
-If so, you're not alone. Many people treat Git like a magic memorizing commands like git push - force-with-lease without understanding what they actually do then pray to the gods that nothing breaks.
-
-The problem is that we're thinking of Git as a collection of commands, when we should be learning it as a visual story. Your repository isn't just a folder with files! It's a living, branching timeline of your project's evolution. And once you learn to see this timeline in your mind's eye, everything changes.
-
-In this article, I'll show you how to transform from someone who just types Git commands into someone who truly understands them by learning to visualize the commit graph that forms the heart of every Git repository.
+If so, you're not alone. Many people treat Git like a magic memorizing commands like git push--force without understanding what they actually do then pray to the god that nothing breaks. The problem is that we're thinking of Git as a collection of commands, when we should be learning it as a visual story. Your repository isn't just a folder with files! It's a living, branching timeline of your project's evolution. And once you learn to see this timeline in your mind's eye, everything changes.
 
 # The Commit Graph
 At its heart, a Git repository is not a folder of files, it is a timeline of snapshots. But unlike a linear timeline, this timeline can branch, merge ect, forming a living history of your project's development.
@@ -45,7 +42,7 @@ If you wonder what's the HEAD mark below master, that is a special pointer that 
 The branches now merged after they decided to split up on the way but feature was left behind since master has advanced in changes and feature does not keep track anymore! Suppose master made 4 other commits (like we saw in previous example), feature wouldn't have them if he doesn't keep track and here is where the miss begins. We have two scenarios:
 1. either master branch is yours and you're just using too many branches for some cause (working localy):
 - In this case for example you only need to keep track of what you have done and do what is needed (git merge master or git rebase master).
-2. or it's some public/collaborative repo that you're into:
+2. or it's some public/collaborative or else repositories that you're into:
 - In this case you would always need to fetch with origin (git fetch origin) to get latest changes, merge/rebase and then work from there, if not, you will end up working on outdated code, merge conflicts will accumulate and of course integration would be painful! (Forget about git push--forcehh)
 
 
@@ -57,4 +54,4 @@ When Git logging used along with VS-Code Graph they provide a perfect Vision of 
 
 <img width="1313" height="368" alt="image" src="https://github.com/user-attachments/assets/95973508-7d0d-4033-b12f-6d913a9c648a" />
 
-Notice that we are now looking at feature branch (we have untracked commit of message 'change4'), Git graph didn't mention anything of that but we're seeing that the VS-Code's Graph has a commit colored in orange, meaning that this branch is behind master branch by one commit which is 'change4'. Beautiful isn't it?
+Notice above that we are now looking at feature branch, it is outdated (it only has till 'change3' where main is already at 'change4'), Git graph didn't mention anything of that but we're seeing that the VS-Code's Graph has a commit colored in orange which means that main has this commit and this branch not. Beautiful isn't it?
