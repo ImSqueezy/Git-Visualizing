@@ -58,4 +58,8 @@ Notice above that we are now looking at feature branch, it is outdated (it only 
 
 This visual ability doesn't just make you better at Git commands, it makes you a better collaborator, as you can quickly understand complex branching strategies and spot integration issues before they become problems. So the next time you work with Git, don't just type. Let the visual story guide you!
 
-(a picture that shows the Github's graph of the project, *to be uploaded*)
+View this articles lifetime on Github: https://github.com/ImSqueezy/Git-Visualizing/commits/main/
+
+<img width="600" height="282" alt="image" src="https://github.com/user-attachments/assets/919fca85-fa4e-472e-898b-ca0253b22a9d" />
+
+Feedbacks and suggestions are much appreciated!
