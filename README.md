@@ -55,3 +55,7 @@ When Git logging used along with VS-Code Graph they provide a perfect Vision of 
 <img width="1313" height="368" alt="image" src="https://github.com/user-attachments/assets/95973508-7d0d-4033-b12f-6d913a9c648a" />
 
 Notice above that we are now looking at feature branch, it is outdated (it only has till 'change3' where main is already at 'change4'), Git graph didn't mention anything of that but we're seeing that the VS-Code's Graph has a commit colored in orange which means that main has this commit and this branch not. Beautiful isn't it?
+
+This visual ability doesn't just make you better at Git commands, it makes you a better collaborator, as you can quickly understand complex branching strategies and spot integration issues before they become problems. So the next time you work with Git, don't just type. Let the visual story guide you!
+
+(a picture that shows the Github's graph of the project, *to be uploaded*)
